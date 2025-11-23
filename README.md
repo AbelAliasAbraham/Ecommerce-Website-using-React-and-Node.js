@@ -17,55 +17,6 @@ This repository contains a full-featured e-commerce application built with the *
 
 ---
 
-## 🚀 Getting Started
-
-### 1. Prerequisites
-
-* Node.js (LTS recommended)
-* MongoDB Instance (Local or MongoDB Atlas)
-* Stripe Account (for payment testing)
-
-### 2. Installation
-
-1.  **Clone the Repository:**
-    ```bash
-    git clone [YOUR_REPO_URL]
-    cd [repo-name]
-    ```
-
-2.  **Install Dependencies:**
-    ```bash
-    npm install
-    # Assuming the frontend is inside a 'client' or 'frontend' directory:
-    # cd client && npm install && cd ..
-    ```
-
-3.  **Setup Environment Variables:**
-    Create a file named **`.env`** in the root directory and populate it with your configuration:
-    ```
-    PORT=5000
-    MONGO_URI=mongodb://localhost:27017/Ecommerce
-    JWT_SECRET=your_long_and_secret_jwt_key
-    STRIPE_SECRET_KEY=sk_test_... # Your Stripe Secret Key
-    ```
-
-4.  **Seed the Database (Optional):**
-    The `seed.js` file can be used to populate the database with sample products and an admin user.
-    ```bash
-    # Run the seed script
-    node seed.js
-    ```
-
-5.  **Run the Application:**
-    ```bash
-    # Start the backend server
-    npm run dev # (or `node server.js`)
-    # Start the frontend (assuming standard React setup)
-    # cd client && npm start
-    ```
-
----
-
 ## 🗂️ File Structure
 
 The project follows a standard MERN separation of concerns.
