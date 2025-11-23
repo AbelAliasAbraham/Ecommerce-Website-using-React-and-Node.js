@@ -130,3 +130,68 @@ The functionality of `Signup.jsx` has been merged into `Login.jsx`.
 | :--- | :--- | :--- |
 | **Maintainability** | Duplicate code and confusing file structure. | **Delete Redundant File**. |
 | **Files Affected** | `Signup.jsx`, `App.jsx` | **Remove `Signup.jsx`** and ensure the `/signup` route in `App.jsx` is either removed or redirects users to `/login`. |
+
+
+## 🚀 Getting Started
+
+You will need **Node.js**, **npm**, and a running **MongoDB instance** (local or hosted) to set up and run this project.
+
+### 1. Backend (Server) Setup
+
+1.  **Navigate** to the server directory:
+    ```bash
+    cd server
+    ```
+2.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Configure Environment:**
+    Create a **`.env`** file in the server root and populate it with your configuration:
+
+    ```bash
+    PORT=5000
+    MONGO_URI=mongodb://localhost:27017/blinkit_clone
+    JWT_SECRET=a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
+    FRONTEND_URL=http://localhost:5173
+    ```
+
+4.  **Seed the Database (Optional but Recommended):**
+    Run the `seed.js` script to populate the database with initial products and vendors for testing.
+
+    ```bash
+    node seed.js
+    ```
+
+5.  **Start the Server:** The API will run on `http://localhost:5000`.
+
+    ```bash
+    node server.js
+    ```
+
+***
+
+### 2. Frontend (Client) Setup
+
+1.  **Navigate** to the client directory:
+    ```bash
+    cd client
+    ```
+2.  **Install Dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Configure Environment:**
+    Ensure your client `.env` file (e.g., `client/.env`) is configured correctly to point to the backend:
+
+    ```bash
+    VITE_APP_API_URL=http://localhost:5000
+    ```
+
+4.  **Start the Client:** The application will typically open in your browser on `http://localhost:5173`.
+
+    ```bash
+    npm run dev
+    ```
+
+> 🔔 **Note:** Both the backend server and frontend client must be running **concurrently** in two separate terminal windows for the full application to function.
